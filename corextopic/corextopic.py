@@ -196,7 +196,7 @@ class Corex(object):
                 for a in flatten(anchors):
                     self.alpha[:, a] = 0
                 for ia, a in enumerate(anchors):
-                    self.alpha[ia, a] = anchor_strength
+                    self.alpha[ia, a] = anchor_strength[ia, a]
 
             p_y_given_x, _, log_z = self.calculate_latent(X, self.theta)
 
